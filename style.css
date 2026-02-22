@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #1877f2;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+aside {
+  width: 220px;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+aside button {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+section {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.layer {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark aside {
+  background: #1e1e1e;
+}
+
+.dark .layer {
+  background: #2a2a2a;
+}

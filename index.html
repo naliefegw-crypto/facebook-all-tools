@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook All Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header>
+  <h1>Facebook All Tools</h1>
+  <div class="top-right">
+    <button id="darkToggle">🌙</button>
+    <span id="timer">00:00:00</span>
+  </div>
+</header>
+
+<div class="container">
+  <aside>
+    <button onclick="addLayer('tempmail')">Temp Mail</button>
+    <button onclick="openExternal('https://m.facebook.com/login/')">Create Account</button>
+    <button onclick="addLayer('security')">Two-factor authorisation</button>
+    <button onclick="open2FA()">2FA</button>
+    <button onclick="addLayer('addemail')">Add Email</button>
+    <button onclick="goInstagram()">Instagram</button>
+    <button onclick="openExternal('https://docs.google.com/spreadsheets/d/1Q1wmXR4MgDP2NO621sCpIGg7BDFo1HnZAQ95Wb3JyWk/edit?usp=drivesdk')">Google Sheet</button>
+    <button onclick="clearApp()">Clear Data</button>
+  </aside>
+
+  <section id="content"></section>
+</div>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
